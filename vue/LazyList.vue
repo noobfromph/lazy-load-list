@@ -99,7 +99,7 @@
             this.loading = true
             this.page++
             setTimeout(() => {
-                this.itemsToDisplay = [...this.itemsToDisplay, ...this.items[this.page]]
+                this.itemsToDisplay = Array.isArray(this.itemsToDispla) ? [...this.itemsToDisplay, ...this.items[this.page]] : [...this.items[this.page]]
                 this.loading = false
                 this.loadItems()
             }, 500);
